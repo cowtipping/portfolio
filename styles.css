@@ -1,0 +1,141 @@
+:root {
+    --dark: #0B2027;
+    --action: #59CD90;
+    --bright: #FF41DC;
+    --light: #F1E3E4;
+    --neutral: #FF7F11;
+    --lightrgb: rgba(241, 227, 228, 0.1);
+    --boxwidth: 400px;
+    --boxheight: 214px;
+    --socialssize: 1.3rem;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    background: var(--dark);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    max-width: 80%;
+    margin: auto;
+}
+
+/* .container > div {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+} */
+
+.container > div {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    
+}
+
+h1,
+p {
+    text-align: center;
+    font-size: 2.2rem;
+    color: var(--bright);
+}
+
+.socials a {
+    padding: 0 16px 0 16px;
+    font-size: var(--socialssize);
+}
+
+.icon {
+    /* display: inline-block; */
+    width: var(--socialssize);
+    height: var(--socialssize);
+    stroke-width: 0;
+    stroke: currentColor;
+    fill: currentColor;
+    margin-right: 4px;
+    display: inline-block;
+    vertical-align: -3px;
+}
+
+.container > img {
+    display: block;
+    margin: 0 auto 40px auto;
+}
+
+p {
+    font-size: 1.5rem;
+    color: var(--light);
+}
+
+p a:link, .socials a:link,
+p a:visited, .socials a:visited {
+    color: var(--action);
+    text-decoration: none; 
+}
+
+p a:hover, .socials a:hover,
+p a:active, .socials:active {
+    color: var(--bright);
+    text-decoration: none; 
+}
+
+.projects {
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap;
+}
+
+.project-box {
+    margin: 20px;
+    max-width: var(--boxwidth);
+    background: var(--lightrgb);
+}
+
+.project-box img {
+    display: block;
+    margin: auto;
+    border-radius: 10px;
+    max-width: var(--boxwidth);
+    max-height: var(--boxheight);
+}
+
+.project-caption {
+    border: 2px solid var(--light);
+    background-color: var(--neutral);
+    border-radius: 5px;
+    padding: 4px;
+    text-align: center;
+    font-weight: 800;
+    text-transform: lowercase;
+    letter-spacing: 1px;
+    font-size: 1.8rem;
+    max-width: var(--boxwidth);
+}
+
+.description {
+    max-width: var(--boxwidth);
+    padding: 10px;
+    min-height: 200px;
+}
+
+.description p {
+    font-size: 1.1rem;
+}
+
+.project-caption a:link,
+.project-caption a:visited {
+    color: var(--dark);
+    text-decoration: none;
+}
+
+.project-caption a:hover,
+.project-caption a:active {
+    color: var(--light);
+    text-decoration: none; 
+}
